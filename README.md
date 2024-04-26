@@ -26,7 +26,7 @@ It is assumed that there will always be a safe path that the agent can take to e
 <h1>program</h1>
 <hr>
 
-``` py
+```py
 wumpus_board = [
     ["S", "B", "P", "B"],
     ["W", "S", "B", "S"],
