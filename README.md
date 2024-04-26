@@ -25,8 +25,8 @@ It is assumed that there will always be a safe path that the agent can take to e
 <hr>
 <h1>program</h1>
 <hr>
-``` py
-# Define the game board with symbols representing different elements
+
+<p>
 wumpus_board = [
     ["S", "B", "P", "B"],
     ["W", "S", "B", "S"],
@@ -34,16 +34,16 @@ wumpus_board = [
     ["S", "S", "B", "P"]
 ]
 
-# Player's initial position
+
 row = 0
 column = 0
 
 
-# Player's resources
+
 arrow = True
 score = 0
 
-# Game loop
+
 while True:
     # Display the game board
     for r in range(len(wumpus_board)):
@@ -102,15 +102,18 @@ while True:
     else:
         print("Invalid move. Try again.")
 
-# Display final score
+
 print("Final score:", score)
-```
+
+</p>
 
 <hr>
 <h1>Sample Input and Output:</h1>
 <hr>
 
 ![image](https://github.com/natsaravanan/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/87870499/8696111a-a4a7-47cb-ba4b-43a4ef88573f)
+
 ![image](https://github.com/natsaravanan/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/87870499/4be5bf06-79fa-4fa0-9334-38a33f06060b)
+
 <img width="689" alt="Screen Shot 1946-02-06 at 06 43 20" src="https://github.com/vikamuhan-reddy/19AI405ExpNo9/assets/144928933/1e2f3ccf-9bd5-4bc8-9fb6-1e86f9330df5">
 
