@@ -26,7 +26,7 @@ It is assumed that there will always be a safe path that the agent can take to e
 <h1>program</h1>
 <hr>
 
-
+``` py
 wumpus_board = [
     ["S", "B", "P", "B"],
     ["W", "S", "B", "S"],
@@ -105,15 +105,14 @@ while True:
 
 print("Final score:", score)
 
+```
 
-
-<hr>
-<h1>Sample Input and Output:</h1>
-<hr>
+## Sample Input and Output:
 
 ![image](https://github.com/natsaravanan/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/87870499/8696111a-a4a7-47cb-ba4b-43a4ef88573f)
 
 ![image](https://github.com/natsaravanan/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/87870499/4be5bf06-79fa-4fa0-9334-38a33f06060b)
 
+## RESULT:
 <img width="689" alt="Screen Shot 1946-02-06 at 06 43 20" src="https://github.com/vikamuhan-reddy/19AI405ExpNo9/assets/144928933/1e2f3ccf-9bd5-4bc8-9fb6-1e86f9330df5">
 
