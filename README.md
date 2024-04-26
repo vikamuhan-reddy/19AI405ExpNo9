@@ -1,6 +1,6 @@
 <h1>ExpNo 9: Solve Wumpus World Problem using Python demonstrating Inferences from Propositional Logic</h1> 
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+<h3>Name: Vikamuhan reddy.N</h3>
+<h3>Register Number :  212223240181</h3>
 <H3>Aim:</H3>
 <p>
     To solve  Wumpus World Problem using Python demonstrating Inferences from Propositional Logic
@@ -23,9 +23,94 @@ It is assumed that there will always be a safe path that the agent can take to e
 </p>
 
 <hr>
+<h1>program</h1>
+<hr>
+``` py
+# Define the game board with symbols representing different elements
+wumpus_board = [
+    ["S", "B", "P", "B"],
+    ["W", "S", "B", "S"],
+    ["W", "G", "P", "B"],
+    ["S", "S", "B", "P"]
+]
+
+# Player's initial position
+row = 0
+column = 0
+
+
+# Player's resources
+arrow = True
+score = 0
+
+# Game loop
+while True:
+    # Display the game board
+    for r in range(len(wumpus_board)):
+        for c in range(len(wumpus_board[r])):
+            if r == row and c == column:
+                print("X", end=" ")
+            else:
+                print(wumpus_board[r][c], end=" ")
+        print()
+
+    # Check current location
+    location = wumpus_board[row][column]
+    print("Current location:", location)
+
+    # Check if player has found the gold
+    if location == "G":
+        score += 1000
+        print("Congratulations! You found the gold.")
+        break
+
+    # Check if player has fallen into a pit
+    elif location == "P":
+        score -= 1000
+        print("Oh no! You fell into a pit.")
+        break
+
+    # Check if player has encountered the Wumpus
+    elif location == "W":
+        score -= 1000
+        print("Oh no! You encountered the Wumpus.")
+        break
+
+    # Check if player perceives a smell
+    elif location == "S":
+        if arrow:
+            print("You smell something awful nearby.")
+            arrow_choice = input("Do you want to throw an arrow? (y/n): ").lower()
+            if arrow_choice == "y":
+                print("You throw an arrow.")
+                arrow = False
+                score -= 10
+                print("You wasted an arrow. Score:", score)
+            else:
+                print("You decide to save your arrow.")
+
+    # Player movement
+    direction = input("Press u to move up, d to move down, l to move left, r to move right: ").lower()
+    if direction == "u" and row > 0:
+        row -= 1
+    elif direction == "d" and row < len(wumpus_board) - 1:
+        row += 1
+    elif direction == "l" and column > 0:
+        column -= 1
+    elif direction == "r" and column < len(wumpus_board[0]) - 1:
+        column += 1
+    else:
+        print("Invalid move. Try again.")
+
+# Display final score
+print("Final score:", score)
+```
+
+<hr>
 <h1>Sample Input and Output:</h1>
 <hr>
 
 ![image](https://github.com/natsaravanan/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/87870499/8696111a-a4a7-47cb-ba4b-43a4ef88573f)
 ![image](https://github.com/natsaravanan/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/87870499/4be5bf06-79fa-4fa0-9334-38a33f06060b)
+<img width="689" alt="Screen Shot 1946-02-06 at 06 43 20" src="https://github.com/vikamuhan-reddy/19AI405ExpNo9/assets/144928933/1e2f3ccf-9bd5-4bc8-9fb6-1e86f9330df5">
 
