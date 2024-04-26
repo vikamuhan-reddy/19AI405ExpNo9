@@ -25,8 +25,8 @@ It is assumed that there will always be a safe path that the agent can take to e
 <hr>
 <h1>program</h1>
 <hr>
-<p>
-```
+
+
 wumpus_board = [
     ["S", "B", "P", "B"],
     ["W", "S", "B", "S"],
@@ -45,7 +45,7 @@ score = 0
 
 
 while True:
-    # Display the game board
+     Display the game board
     for r in range(len(wumpus_board)):
         for c in range(len(wumpus_board[r])):
             if r == row and c == column:
@@ -53,30 +53,30 @@ while True:
             else:
                 print(wumpus_board[r][c], end=" ")
         print()
-
-    # Check current location
+        
+    Check current location
     location = wumpus_board[row][column]
     print("Current location:", location)
 
-    # Check if player has found the gold
+     Check if player has found the gold
     if location == "G":
         score += 1000
         print("Congratulations! You found the gold.")
         break
 
-    # Check if player has fallen into a pit
+     Check if player has fallen into a pit
     elif location == "P":
         score -= 1000
         print("Oh no! You fell into a pit.")
         break
 
-    # Check if player has encountered the Wumpus
+    Check if player has encountered the Wumpus
     elif location == "W":
         score -= 1000
         print("Oh no! You encountered the Wumpus.")
         break
 
-    # Check if player perceives a smell
+    Check if player perceives a smell
     elif location == "S":
         if arrow:
             print("You smell something awful nearby.")
@@ -89,7 +89,7 @@ while True:
             else:
                 print("You decide to save your arrow.")
 
-    # Player movement
+    Player movement
     direction = input("Press u to move up, d to move down, l to move left, r to move right: ").lower()
     if direction == "u" and row > 0:
         row -= 1
@@ -105,8 +105,7 @@ while True:
 
 print("Final score:", score)
 
-```
-</p>
+
 
 <hr>
 <h1>Sample Input and Output:</h1>
