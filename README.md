@@ -26,7 +26,7 @@ It is assumed that there will always be a safe path that the agent can take to e
 <h1>program</h1>
 <hr>
 
-<p>
+# Define the game board with symbols representing different elements
 wumpus_board = [
     ["S", "B", "P", "B"],
     ["W", "S", "B", "S"],
@@ -43,8 +43,7 @@ column = 0
 arrow = True
 score = 0
 
-</p>
-<p>
+# 
 while True:
     # Display the game board
     for r in range(len(wumpus_board)):
