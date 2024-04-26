@@ -43,7 +43,8 @@ column = 0
 arrow = True
 score = 0
 
-
+</p>
+<p>
 while True:
     # Display the game board
     for r in range(len(wumpus_board)):
